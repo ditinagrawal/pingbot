@@ -47,7 +47,7 @@ yarn-error.log*
 Thumbs.db
 
 # Prisma
-/prisma/generated/prisma
+/app/generated/prisma
 
 # Agents
 .agents/
