@@ -45,3 +45,9 @@ yarn-error.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# Prisma
+/prisma/generated/prisma
+
+# Agents
+.agents/
