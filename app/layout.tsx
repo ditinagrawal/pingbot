@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 
 import { cn } from "@/lib/utils";
+import { TRPCReactProvider } from "@/server/client";
 
 import "./globals.css";
 
@@ -16,8 +17,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={cn("h-full", "antialiased", rubik.className)}>
-      <body className="flex min-h-full flex-col">{children}</body>
-    </html>
+    <TRPCReactProvider>
+      <html lang="en" className={cn("h-full", "antialiased", rubik.className)}>
+        <body className="flex min-h-full flex-col">{children}</body>
+      </html>
+    </TRPCReactProvider>
   );
 }
